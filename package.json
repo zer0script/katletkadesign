@@ -1,0 +1,17 @@
+{
+  "name": "katletkadesign",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Статический сайт-портфолио и его локальный редактор контента",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "validate": "node scripts/validate-content.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-dist.mjs",
+    "verify": "npm run validate && npm run build && npm run check",
+    "preview": "node scripts/preview.mjs",
+    "edit": "node scripts/editor.mjs",
+    "test": "node --test \"tests/*.test.mjs\""
+  }
+}

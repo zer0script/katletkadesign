@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="__CSP__">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a0b2e">
+<title>portfolio — Никита, дизайнер</title>
+<noscript><style>.rv{opacity:1!important;transform:none!important;filter:none!important}.pill{opacity:1!important}</style></noscript>
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="nocur">
+<div id="prog"></div>
+<div class="aurora"><b></b><b></b><b></b></div>
+<nav class="dots" aria-label="Экраны"><a href="#hero" aria-label="portfolio"></a><a href="#about-s" aria-label="О себе"></a><a href="#contact" aria-label="Связь"></a></nav>
+<div id="cur"></div><div id="dot"></div>
+
+<!-- 1. PORTFOLIO + КНОПКИ -->
+<section id="hero">
+  <div class="cube-wrap" style="--s:170px;top:4vh;left:1vw;--d:.1s"><div class="cube"></div></div>
+  <div class="cube-wrap vidcube" id="cube-r" data-hover role="button" tabindex="0" aria-label="Включить видео" style="--s:190px;bottom:6vh;right:1vw;--d:.5s"><div class="cube"></div></div>
+  <h1 class="title" id="title" aria-label="portfolio"></h1>
+  <p class="lede rv" id="lede"></p>
+  <nav class="menu" id="menu" aria-label="Разделы"></nav>
+  <div class="hint" id="hint" aria-hidden="true"><span>листайте вниз <i>↓</i></span></div>
+</section>
+
+<!-- 2. О СЕБЕ -->
+<section id="about-s">
+  <div class="cube-wrap" style="--s:140px;top:3vh;left:2vw;--d:.2s"><div class="cube"></div></div>
+  <div class="about" id="about">
+    <h2 class="rv">О себе</h2>
+    <p class="lead rv" style="--rd:.12s">Хороший дизайн не просто красиво выглядит. Он работает.</p>
+    <p class="rv" style="--rd:.24s">Меня зовут Никита. Я дизайнер из Симферополя, и я не люблю визуальный шум.</p>
+    <p class="rv" style="--rd:.36s">Превращаю сложные смыслы в понятную инфографику, удобный веб-дизайн, сочные плакаты, презентации и превью.</p>
+    <p class="rv" style="--rd:.48s">Усиливаю работы с помощью ИИ — генерирую уникальные идеи.</p>
+    <p class="go rv" style="--rd:.6s">Листайте ниже, чтобы связаться со мной ↓</p>
+  </div>
+</section>
+
+<!-- 3. СВЯЗЬ -->
+<section class="contact" id="contact">
+  <h2 class="ch rv">Связь с дизайнером</h2>
+  <p class="cp rv" id="cta" style="--rd:.12s"></p>
+  <a class="tg rv" id="tg" style="--rd:.24s" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.6 19.6c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.6 13.3 1.9 11.8c-1-.3-1-1 .2-1.5L20.4 3.2c.9-.3 1.6.2 1.5 1.1z"/></svg></a>
+</section>
+
+<!-- Страница раздела / прайс -->
+<div id="page" aria-hidden="true"><button type="button" class="pill back" id="back">← Назад</button><div class="pg" id="pg"></div></div>
+
+<!-- Просмотр работы -->
+<div id="vid" hidden role="dialog" aria-modal="true" aria-label="Видео"><video id="vid-v" playsinline preload="none" controls></video><button type="button" class="lbx" id="vid-x" aria-label="Закрыть">✕</button></div>
+<div id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр работы">
+  <button type="button" class="lbx" id="lb-x" aria-label="Закрыть">✕</button>
+  <button type="button" class="lbn" id="lb-p" aria-label="Предыдущая">‹</button>
+  <figure><img id="lb-i" alt=""><figcaption id="lb-c"></figcaption></figure>
+  <button type="button" class="lbn" id="lb-n" aria-label="Следующая">›</button>
+</div>
+
+<div id="toast" hidden role="status"></div>
+<script type="application/json" id="site-data">__CONTENT_JSON__</script>
+<script type="module" src="js/site/main.js"></script>
+</body>
+</html>
